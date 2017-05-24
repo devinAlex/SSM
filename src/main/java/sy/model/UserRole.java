@@ -1,7 +1,17 @@
 package sy.model;
 
 public class UserRole {
-    private String id;
+	private Role role;
+	
+    public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	private String id;
 
     private String roleid;
 

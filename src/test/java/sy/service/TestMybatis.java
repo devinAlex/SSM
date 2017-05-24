@@ -49,9 +49,9 @@ public class TestMybatis {
 		logger.info(JSON.toJSONStringWithDateFormat(l, "yyyy-MM-dd HH:mm:ss"));
 	}
 
-//	@Test
-//	public void test4() {
-//		List<User> l = userService.getAll3();
-//		logger.info(JSON.toJSONStringWithDateFormat(l, "yyyy-MM-dd HH:mm:ss"));
-//	}
+	@Test
+	public void test4() {
+		List<User> l = userService.getAll3();
+		logger.info(JSON.toJSONStringWithDateFormat(l, "yyyy-MM-dd HH:mm:ss"));
+	}
 }

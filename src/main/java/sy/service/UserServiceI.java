@@ -10,4 +10,6 @@ public interface UserServiceI {
 	public List<User> getAll();
 	
 	public List<User> getAll2();
+	
+	public List<User> getAll3();
 }

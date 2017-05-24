@@ -35,4 +35,7 @@ public class UserServiceImpl implements UserServiceI {
 		return userMapper.getAll2();
 	}
 	
+	public List<User> getAll3(){
+		return userMapper.getAll3();
+	}
 }

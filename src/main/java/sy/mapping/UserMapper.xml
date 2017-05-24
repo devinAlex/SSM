@@ -152,4 +152,36 @@
 	user
 	INNER JOIN userrole ON user.id = userrole.userId
   </select>
+  
+  <resultMap type="sy.model.User" id="userResultMap3" extends="BaseResultMap">
+		<collection property="userRoles" javaType="list" ofType="sy.model.UserRole">
+			<id property="id" column="userrole_id" />
+			<result column="role_id" property="roleid" />
+			<result property="userid" column="user_id" />
+
+			<association property="role" javaType="sy.model.Role">
+				<id property="id" column="role_id" />
+				<result property="text" column="role_text" />
+			</association>
+		</collection>
+	</resultMap>
+	<select id="getAll3" resultMap="userResultMap3">
+	  SELECT
+		user.id,
+		user.createdatetime,
+		user.modifydatetime,
+		user.`name`,
+		user.pwd,
+		user.createTime,
+		user.updateTime,
+		userrole.id userrole_id,
+		userrole.roleId role_id,
+		userrole.userId user_id,
+		role.text role_text,
+		role.id role_id
+		FROM
+		userrole
+		JOIN user ON user.id = userrole.userId
+		JOIN role ON userrole.roleId = userrole.userId
+	</select>
 </mapper>
