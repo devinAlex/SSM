@@ -1,12 +1,13 @@
 SSM 基本学习（一）
 ================================================================
-###1. SpringMVC+Spring+Myatis 环境搭建。
-
-###2. UserServiceImplTest 用PowerMock简单 test。
-
+1. SpringMVC+Spring+Myatis 环境搭建。
+----------------------------------------------------------------
+2. UserServiceImplTest 用PowerMock简单 test。
+---------------------------------------------------------------
     了解更多可参考：http://blog.csdn.net/jackiehff/article/details/14000779
 
-###3. mybatis多表查询：
+3. mybatis多表查询：
+----------------------------------------------------------------
   1> getAll() N+1  不宜选择
   2> getAll2() 两表联合查询，可选择。只查询出角色ID，数据格式如下：
     {
